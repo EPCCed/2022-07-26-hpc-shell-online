@@ -1,7 +1,7 @@
 ---
 title: "Connecting to the remote HPC system"
 teaching: 25 
-exercises: 10
+exercises: 15
 questions:
 - How do I open a terminal?
 - How do I connect to a remote computer?

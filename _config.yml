@@ -62,7 +62,7 @@ instructor_post_survey: "https://www.surveymonkey.com/r/instructor_training_post
 
 
 # Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am).
-start_time: 0
+start_time: 570
 
 # Specify that things in the episodes collection should be output.
 collections:
@@ -111,19 +111,13 @@ remote_theme: carpentries/carpentries-theme
 # * workshop_host_prompt - The bash prompt on the remote host
 # * workshop_host_homedir - The location of the home directory on the remote host
 #
-# Example: Graham cluster at Compute Canada, University of Waterloo
-workshop_host: "Graham"
-workshop_host_id: "ComputeCanada_Graham"
-workshop_host_login: "graham.computecanada.ca"
-workshop_host_location: "University of Waterloo"
-workshop_host_prompt: "[yourUsername@gra-login1 ~]$ "
-workshop_host_homedir: "/home"
-workshop_sched_id: "ComputeCanada_Graham_slurm"
-# Example: Cirrus at EPCC, The University of Edinburgh
-# workshop_host: "Cirrus"
-# workshop_host_id: "EPCC_Cirrus"
-# workshop_host_login: "login.cirrus.ac.uk"
-# workshop_host_location: "EPCC, The University of Edinburgh"
-# workshop_host_prompt: "[yourUsername@cirrus-login0 ~]$ "
-# workshop_host_homedir: "/lustre/home/tc001"
+
+workshop_host: "ARCHER2"
+workshop_host_id: "EPCC_ARCHER2"
+workshop_host_login: "login.archer2.ac.uk"
+workshop_host_location: "EPCC, The University of Edinburgh"
+workshop_host_prompt: "auser@uan01:~> "
+workshop_host_homedir: "/home/ta028/ta028"
+workshop_account: "ta028"
+workshop_reservation: "res1_ta028"
 

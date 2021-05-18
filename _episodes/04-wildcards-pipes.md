@@ -1,6 +1,6 @@
 ---
 title: "Wildcards and pipes"
-teaching: 45
+teaching: 40
 exercises: 10
 questions:
 - How can I run a command on multiple files at once?

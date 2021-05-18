@@ -27,6 +27,9 @@ By the end of this workshop, students will know how to:
 * Use the UNIX command line (also known as terminal or shell) to operate a
   computer, connect to a remote HPC system, and write simple shell scripts.
 
+This lesson is part of a 2-day ARCHER2 course, you can find the material 
+for day 2 at [Introduction to High Performance Computing](https://epcced.github.io/2021-06-03-hpc-intro-online/).
+
 <h2 id="general">General Information</h2>
 
 {% comment %}

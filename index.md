@@ -7,10 +7,10 @@ address:
 country: "UK"
 language: "English"
 latlng: 
-humandate: 2 June 2021
-humantime: 09:00-16:00 BST
-startdate: 2021-06-02
-instructor: 
+humandate: 27 January 2022
+humantime: 09:30-16:00 BST
+startdate: 2022-01-27
+instructor: Tony Hallam
 helper: 
 email: ["support@archer2.ac.uk"]
 collaborative_notes: 

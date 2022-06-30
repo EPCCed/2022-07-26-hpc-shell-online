@@ -47,6 +47,9 @@ endif
 serve : lesson-md
 	${JEKYLL} serve
 
+serve_windows : lesson-md
+    bundle exec jekyll --force_polling --livereload
+
 ## * site             : build website but do not run a server
 site : lesson-md
 	${JEKYLL} build

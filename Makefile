@@ -6,7 +6,8 @@ export SHELL = /bin/bash
 
 # Settings
 MAKEFILES=Makefile $(wildcard *.mk)
-JEKYLL=bundle config set path '.vendor/bundle' && bundle install && bundle update && bundle exec jekyll
+JEKYLL=bundle config set path '.vendor/bundle' && bundle install && bundle update 
+JEKYLL_EXEC=bundle exec jekyll
 PARSER=bin/markdown_ast.rb
 DST=_site
 
@@ -45,14 +46,14 @@ endif
 
 ## * serve            : render website and run a local server
 serve : lesson-md
-	${JEKYLL} serve
+	${JEKYLL} && ${JEKYLL_EXEC} serve
 
 serve_windows : lesson-md
-    bundle exec jekyll --force_polling --livereload
+	${JEKYLL} && bundle exec jekyll serve --livereload --force-polling
 
 ## * site             : build website but do not run a server
 site : lesson-md
-	${JEKYLL} build
+	${JEKYLL} && ${JEKYLL_EXEC} build
 
 ## * docker-serve     : use Docker to serve the site
 docker-serve :

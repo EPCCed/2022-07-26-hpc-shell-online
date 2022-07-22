@@ -148,7 +148,7 @@ $ ls ~/.ssh/
 
 then generate a new public-private key pair,
 ```
-$ ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_{{ site.workshop_host }}_ed25519
+$ ssh-keygen -o -a 100 -t rsa -b 4096 -f ~/.ssh/id_{{ site.workshop_host }}_rsa
 ```
 {: .language-bash}
 
@@ -164,15 +164,6 @@ $ ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_{{ site.workshop_host }}_ed25519
   If you already have SSH keys, make sure you specify a different name:
   `ssh-keygen` will overwrite the default key if you don't specify!
 
-If ed25519 is not available, use the older (but strong and trusted)
-[RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) cryptography:
-
-```
-$ ls ~/.ssh/
-$ ssh-keygen -o -a 100 -t rsa -b 4096 -f ~/.ssh/id_{{ site.workshop_host }}_rsa
-```
-{: .language-bash}
- 
 The flag `-b` sets the number of bits in the key.
 The default is 2048. EdDSA uses a fixed key length,
 so this flag would have no effect.
@@ -182,10 +173,8 @@ Cryptography is only as good as the weakest link, and this will be
 used to connect to a powerful, precious, computational resource.
 
 Take a look in `~/.ssh` (use `ls ~/.ssh`). You should see the two 
-new files: your private key (`~/.ssh/key_{{ site.workshop_host }}_ed25519` 
-or `~/.ssh/key_{{ site.workshop_host }}_rsa`) and 
-the public key (`~/.ssh/key_{{ site.workshop_host }}_ed25519.pub` or
-`~/.ssh/key_{{ site.workshop_host }}_rsa.pub`). If a key is 
+new files: your private key (`~/.ssh/key_{{ site.workshop_host }}_rsa`) and 
+the public key (`~/.ssh/key_{{ site.workshop_host }}_rsa.pub`). If a key is 
 requested by the system administrators, the *public* key is the one
 to provide.
 
